@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Gaijin Pilots - Home</title>
+    <link rel="icon" href="imgs\GP-corrected.png" width="32" height="32">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="main.css">
+  </head>
+<body class="bg-dark text-white">
+<video id="bgVideo" autoplay muted loop playsinline></video>
+
+  
+<nav class="navbar bg-black sticky-top navbar-dark">
+  <div class="container-fluid">
+
+
+    <img src="imgs/GP-corrected.png"
+         alt="GP Icon"
+         class="IconPG p-1">
+
+
+    <button class="navbar-toggler ms-auto" 
+            type="button" 
+            data-bs-toggle="offcanvas" 
+            data-bs-target="#offcanvasNavbar" 
+            aria-controls="offcanvasNavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+
+    <div class="offcanvas offcanvas-end bg-black" tabindex="-1" id="offcanvasNavbar">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title text-white">Menu</h5>
+        <button type="button" class="btn-close d-flex bg-light-subtle text-white p-2 align-content-center justify-content-center" data-bs-dismiss="offcanvas" aria-label="fechar"></button>
+      </div>
+      <div class="offcanvas-body">
+        <ul class="navbar-nav text-center justify-content-center flex-grow-1 gap-3 pe-3 ">
+          <li class="nav-item border border-light-subtle border-1 rounded rounded-4"><a class="nav-link active" href="#Titulodapg">Home</a></li>
+          <li class="nav-item border border-light-subtle border-1 rounded rounded-4"><a class="nav-link" href="#">Link</a></li>
+          <li class="nav-item border border-light-subtle border-1 rounded rounded-4"><a class="nav-link" href="https://discord.gg/HAM842aDDD"><img src="https://cdn.prod.website-files.com/6257adef93867e50d84d30e2/62fddf0fde45a8baedcc7ee5_847541504914fd33810e70a0ea73177e%20(2)-1.png" alt="Discord Icon" > - Nosso Discord.</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>
+
+
+<main>
+  <div class="container object-fit-cover text-center">
+  <h1 class="text-center mt-5 border rounded rounded-3 border-1 border-dark" id="Titulodapg">Seja bem-vindo á Gaijin Pilots.</h1>
+  </div>
+  <br>
+  
+</main>
+    
+
+
+<footer></footer>
+
+<div id="loadingHH">
+  <div class="spinnerHH"></div>
+</div>
+
+<div id="welcome">
+  <h1>Seja bem-vindo á Gaijin Pilots.</h1>
+</div>
+
+<script>
+if (!localStorage.getItem("visitou")) {
+  setTimeout(() => {
+    document.getElementById("welcome").classList.add("hidden");
+  }, 2000);
+  localStorage.setItem("visitou", "sim");
+} else {
+  document.getElementById("welcome").style.display = "none";
+}
+</script>
+
+<script>
+const videos = [
+  "BG-webm/subi22bwaygif1.webm",
+  "BG-webm/subi22bwaygif2.webm",
+  "BG-webm/subi22bwaygif3.webm",
+  "BG-webm/subi22bwaygif4.webm"
+];
+let index = 0;
+const bg = document.getElementById("bgVideo");
+function trocarVideo() {
+  bg.src = videos[index];
+  bg.play();
+  index++;
+  if (index >= videos.length) index = 0;
+}
+trocarVideo();
+setInterval(trocarVideo, 30000);
+</script>
+
+<script>
+window.addEventListener("load", () => {
+  document.getElementById("loadingHH").style.display = "none";
+});
+</script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+  </body>
+</html>
