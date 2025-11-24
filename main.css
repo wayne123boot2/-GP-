@@ -37,28 +37,6 @@ html {
   opacity: 0.2;
 }
 
-#welcome {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0,0,0,0.75);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 3rem;
-  color: white;
-  z-index: 9999;
-  opacity: 1;
-  transition: opacity 1s ease;
-}
-
-.hidden {
-  opacity: 0;
-  pointer-events: none;
-}
-
 .IconPG{
   width: 125px;
   height: 125px;

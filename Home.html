@@ -74,21 +74,6 @@
   <div class="spinnerHH"></div>
 </div>
 
-<div id="welcome">
-  <h1>Seja bem-vindo á Gaijin Pilots.</h1>
-</div>
-
-<script>
-if (!localStorage.getItem("visitou")) {
-  setTimeout(() => {
-    document.getElementById("welcome").classList.add("hidden");
-  }, 2000);
-  localStorage.setItem("visitou", "sim");
-} else {
-  document.getElementById("welcome").style.display = "none";
-}
-</script>
-
 <script>
 const videos = [
   "BG-webm/subi22bwaygif1.webm",
