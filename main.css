@@ -64,6 +64,47 @@ html {
   height: 125px;
 }
 
+main{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+main div:hover{
+ cursor: default;
+}
+.BENGA1{
+  padding: 0px;
+  background: transparent;
+  backdrop-filter: blur(5px);
+  max-width: fit-content;
+  margin: 100px 0px 0px 0px;
+  border-radius: 22px;
+}
+#Titulodapg{
+  margin: 0px;
+}
+/* margin: emcima direta embaxo esquerda*/
+.BENGA2div{
+  padding: 0px;
+  background: transparent;
+  backdrop-filter: blur(5px);
+  max-width: fit-content;
+  margin: 50px 65vw 0px 0px;
+  border-radius: 0px;
+}
+.BENGA2q{
+  max-width: fit-content;
+  border-radius: var(--bs-border-radius-xl);
+}
+.BENGA3{
+  padding: 0px;
+  background: transparent;
+  backdrop-filter: blur(5px);
+  max-width: fit-content;
+  margin: -2px 0px 0px 16vw;
+  border-radius: 0px;
+}
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
 
